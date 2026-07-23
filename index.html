@@ -63,6 +63,7 @@
         /* Sophisticated Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
+            height: 6px;
         }
         ::-webkit-scrollbar-track {
             background: theme('colors.brand.light');
@@ -85,7 +86,7 @@
             -webkit-text-stroke: 1.5px theme('colors.brand.light');
         }
 
-        /* Hide scrollbar for the laptop screen */
+        /* Hide scrollbar for the laptop screen and image galleries */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -418,15 +419,17 @@
             <!-- Bento Grid Projects -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Project 1 -->
+                <!-- Project 1: Portal Certs AI -->
                 <div class="dark-glass rounded-3xl p-2 group hover:border-brand-purple/50 transition-colors duration-500 flex flex-col">
                     <div class="bg-[#121214] rounded-2xl p-6 h-full border border-white/5 flex flex-col relative overflow-hidden">
                         <!-- Glow effect -->
                         <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-colors"></div>
                         
-                        <div class="h-40 bg-[#1A1A1C] rounded-xl mb-6 flex items-center justify-center relative border border-white/5">
-                            <i class="ph ph-certificate text-5xl text-gray-500 group-hover:text-blue-400 group-hover:scale-110 transition-all duration-300"></i>
+                        <!-- Image Container -->
+                        <div class="h-48 bg-[#1A1A1C] rounded-xl mb-6 flex relative border border-white/5 overflow-hidden group-hover:border-blue-500/30 transition-colors">
+                            <img src="images/cert.jpeg" alt="Portal Certs" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
                         </div>
+
                         <h3 class="text-2xl font-bold mb-2 tracking-tight">Portal Certs Al</h3>
                         <p class="text-sm text-gray-400 mb-6 flex-grow leading-relaxed">Plataforma serverless de evaluación dinámica. Integra IA generativa (Gemini 2.5 Flash / Vertex AI) para escalar certificación corporativa basándose en documentos técnicos vía RAG.</p>
                         
@@ -442,15 +445,21 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: POS Cookiemania -->
                 <div class="dark-glass rounded-3xl p-2 group hover:border-brand-purple/50 transition-colors duration-500 flex flex-col">
                     <div class="bg-[#121214] rounded-2xl p-6 h-full border border-white/5 flex flex-col relative overflow-hidden">
                         <!-- Glow effect -->
                         <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-colors"></div>
 
-                        <div class="h-40 bg-[#1A1A1C] rounded-xl mb-6 flex items-center justify-center relative border border-white/5">
-                            <i class="ph ph-cookie text-5xl text-gray-500 group-hover:text-emerald-400 group-hover:scale-110 transition-all duration-300"></i>
+                        <!-- Image Gallery Container -->
+                        <div class="h-48 bg-[#1A1A1C] rounded-xl mb-6 flex overflow-x-auto snap-x snap-mandatory no-scrollbar relative border border-white/5 gap-3 p-2">
+                            <img src="images/galleto1.png" alt="Cookiemania 1" class="h-full w-auto min-w-[85%] object-cover rounded-lg snap-center shadow-md border border-white/10">
+                            <img src="images/galleto2.png" alt="Cookiemania 2" class="h-full w-auto min-w-[85%] object-cover rounded-lg snap-center shadow-md border border-white/10">
+                            <img src="images/galleto3.png" alt="Cookiemania 3" class="h-full w-auto min-w-[85%] object-cover rounded-lg snap-center shadow-md border border-white/10">
+                            <img src="images/galleto4.png" alt="Cookiemania 4" class="h-full w-auto min-w-[85%] object-cover rounded-lg snap-center shadow-md border border-white/10">
+                            <img src="images/galleto5.png" alt="Cookiemania 5" class="h-full w-auto min-w-[85%] object-cover rounded-lg snap-center shadow-md border border-white/10">
                         </div>
+
                         <h3 class="text-2xl font-bold mb-2 tracking-tight">POS Cookiemania</h3>
                         <p class="text-sm text-gray-400 mb-6 flex-grow leading-relaxed">Sistema integral de punto de venta MVC para panadería artesanal. Control de producción por lotes, cálculo de mermas y roles de usuario avanzados.</p>
                         
@@ -466,16 +475,20 @@
                     </div>
                 </div>
 
-                <!-- Project 3 (Wide) -->
+                <!-- Project 3 (Wide): Déjate Ser -->
                 <div class="dark-glass rounded-3xl p-2 group hover:border-brand-purple/50 transition-colors duration-500 flex flex-col lg:col-span-1 md:col-span-2">
                     <div class="bg-[#121214] rounded-2xl p-6 h-full border border-white/5 flex flex-col relative overflow-hidden">
                         <!-- Glow effect -->
                         <div class="absolute top-0 right-0 w-40 h-40 bg-brand-purple/10 rounded-full blur-3xl group-hover:bg-brand-purple/20 transition-colors"></div>
 
-                        <div class="h-40 bg-gradient-to-br from-brand-purple/10 to-transparent border border-brand-purple/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-                            <i class="ph ph-sparkle text-5xl text-brand-purple group-hover:scale-110 transition-all duration-300"></i>
-                            <div class="absolute bottom-3 right-3 text-[10px] font-bold tracking-widest uppercase text-brand-purple/60">SaaS Platform</div>
+                        <!-- Single Large Image Container -->
+                        <div class="h-56 bg-[#1A1A1C] rounded-xl mb-6 relative overflow-hidden border border-brand-purple/20 group-hover:border-brand-purple/50 transition-colors">
+                            <img src="images/dejateserr.png" alt="Déjate Ser Platform" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#121214] via-transparent to-transparent"></div>
+                            <div class="absolute bottom-3 right-3 text-[10px] font-bold tracking-widest uppercase text-brand-purple/90 bg-brand-dark/80 px-2 py-1 rounded border border-brand-purple/30 backdrop-blur-md">SaaS Platform</div>
                         </div>
+
                         <h3 class="text-2xl font-bold mb-2 tracking-tight">Déjate Ser</h3>
                         <p class="text-sm text-gray-400 mb-6 flex-grow leading-relaxed">Ecosistema SaaS de consultoría de imagen con telemetría integrada (GA4, GSC, Looker Studio). Cuenta con motor de IA asíncrono para análisis biométrico, prevención de overbooking y pasarela de Stripe.</p>
                         
@@ -485,7 +498,7 @@
                             <span class="text-[11px] font-bold bg-brand-purple/20 text-brand-purple px-2.5 py-1 rounded-md">Looker Studio & GA4</span>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-white/10 mt-auto">
-                            <a href="#" class="bg-white text-black text-xs font-bold px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">Ver Demo en vivo</a>
+                            <a href="https://dejateser.com" target="_blank" class="bg-white text-black text-xs font-bold px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">Ver Demo en vivo</a>
                             <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="ph-fill ph-github-logo text-2xl"></i></a>
                         </div>
                     </div>
@@ -553,17 +566,16 @@
                 ¿Interesada en crear<br>algo increíble?<br>
             </h2>
             
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10 text-xl md:text-3xl font-extrabold tracking-tight">
-                <a href="mailto:paulinaduran3e@gmail.com" class="text-brand-gray hover:text-brand-purple transition-colors relative group">
-                    Envíame un correo
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mt-10 text-xl font-bold tracking-tight">
+                <a href="mailto:paulinaduran3e@gmail.com" target="_blank" class="text-brand-gray hover:text-brand-purple transition-colors relative group flex items-center gap-2">
+                    paulinaduran3e@gmail.com
                     <span class="absolute -bottom-2 left-0 w-0 h-1 bg-brand-purple transition-all group-hover:w-full"></span>
                 </a>
                 <span class="text-gray-300 font-light mx-2 hidden sm:block">o</span>
-                <a href="tel:4776017502" class="text-brand-gray hover:text-emerald-500 transition-colors relative group">
-                    escríbeme por WA
+                <a href="https://wa.me/524776017502" target="_blank" class="text-brand-gray hover:text-emerald-500 transition-colors relative group flex items-center gap-2">
+                    <i class="ph-fill ph-whatsapp-logo text-emerald-500 text-2xl"></i> +52 477 601 75 02
                     <span class="absolute -bottom-2 left-0 w-0 h-1 bg-emerald-500 transition-all group-hover:w-full"></span>
                 </a>
-                <i class="ph ph-arrow-right text-brand-purple ml-2 animate-pulse hidden sm:block"></i>
             </div>
 
             <div class="mt-28 flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-8 text-brand-gray font-semibold text-sm">
@@ -590,7 +602,7 @@
             }
         });
 
-        // Skills Data (Actualizado con Cloud, IA y Data)
+        // Skills Data
         const skillsData = {
             languages: [
                 { icon: 'ph-file-js', name: 'JavaScript ES6+', desc: 'Lógica asíncrona y DOM.', color: 'text-amber-500' },
