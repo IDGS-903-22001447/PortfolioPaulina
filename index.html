@@ -123,24 +123,31 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        @media (max-width: 768px) {
+  @media (max-width: 768px) {
             .timeline-line::after {
                 left: 24px;
             }
             .timeline-item {
                 flex-direction: column !important;
                 align-items: flex-start !important;
-                padding-left: 60px;
+                padding-left: 70px; /* Aumentado ligeramente para dar espacio a los círculos grandes */
+                position: relative;
             }
-            .timeline-item > div {
+            /* Solo aplicamos el ancho del 100% al div del texto, excluyendo a los círculos */
+            .timeline-item > div:not(.timeline-circle) {
                 width: 100% !important;
                 text-align: left !important;
                 padding: 0 !important;
-                margin-bottom: 2rem;
+                margin-bottom: 0 !important;
+            }
+            /* Ocultamos los divs espaciadores vacíos para que no generen huecos extra */
+            .timeline-item > div:empty {
+                display: none !important;
             }
             .timeline-circle {
                 left: 24px !important;
                 transform: translateX(-50%) !important;
+                top: 0 !important; /* Mantiene los círculos alineados con el inicio del texto */
             }
         }
     </style>
